@@ -1,0 +1,617 @@
+/*111111111111111111111111111111*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+header{
+    
+    position: fixed;
+    width: 100%;
+    
+}
+video{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.head{
+    
+    height: 80px;
+    /* background-color: black; */
+    background-image: radial-gradient(rgb(52, 52, 60),rgb(62, 84, 92),rgb(28, 48, 59));
+    border-bottom: 1px solid black;
+}
+.head h2{
+    position: relative;
+    left: 50px;
+    top: 25px;
+    color: white;
+    font-size: 28px;
+}
+.head .frame{
+    position: absolute;
+    top: 25px;
+    right: 200px;
+    height: 60px;
+    width: 200px;
+    /* background-color: white; */
+}
+nav{
+    position: fixed;
+    width: 200px;
+    top: 150px;
+    left: 50px;
+
+}
+.nav{
+    border: 2px solid #1ed4cb;
+    background-color: black;
+    box-shadow: 0 0 10px rgb(148, 141, 141);
+}
+.nav a, .down{
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+.nav a:hover, .down:hover{
+    color: #f1f1f1;
+    text-decoration: none;
+}
+
+.nav span{
+    padding-left: 15px;
+    font-size: large;
+    background: linear-gradient(to right,white ,white) no-repeat left bottom;
+    background-size: 0 2px ;
+    background-origin: content-box;
+    transition: background-size 1300ms;
+}
+/****************************************************************/
+.nav .a-container span{
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.nav .a-container span.act{
+    opacity: 1;
+}
+
+.nav .a-container span.act{
+    background: linear-gradient(to right,white ,white) no-repeat left bottom;
+    background-size: 0 2px ;
+    background-origin: content-box;
+    transition: opacity 0.5s, background-size 1.3s;
+}
+
+.nav .a-container span.act:hover{
+    background-size: 100% 2px;
+}
+
+.nav span:hover{
+    background-size: 100% 2px;
+}
+/**************************************************************************************/
+.nav .a-container a span{
+    padding-left: 45px;
+    font-size: medium;
+    background: linear-gradient(to right,white ,white) no-repeat left bottom;
+    background-size: 0 2px ;
+    background-origin: content-box;
+    transition: background-size 1300ms;
+}
+
+.nav .a-container a span:hover{
+    background-size: 100% 2px;
+}
+/****************************************************************************************/
+.a-container{
+    display: none;
+    padding-left: 10px;
+    /**************************************************************************************/
+    transition: height 0.5s ease-in-out; /* 添加过渡效果 */
+}
+
+
+section{
+    position: relative;
+    top: 150px;
+    left: 280px;
+    width: 90%;
+}
+.user{
+    position: relative;
+    width: 100%;
+    display: none;
+}
+.up{
+    height: 100px;
+    width: 80%;
+    border: 2px solid #1eb3ac;
+    border-radius: 15px;
+}
+.s1{
+     text-align: center;
+    height: 40px;
+    line-height: 40px;
+    color: #f1f1f1;
+    border-bottom: 1px solid gray;
+}
+.s1 i{
+    position: absolute;
+    left: 10px;
+    font-size: 16px;
+    font-style: normal;
+}
+.s2{
+    line-height: 50px;
+    height: 50px
+}
+.s2 span{
+    color: #f1f1f1;
+}
+.s2 button{
+    position: relative;
+    top: 5px;
+    border: 1px solid gray;
+    border-radius: 15px;
+    outline: none;
+    height: 40px;
+    line-height: 40px;
+    width: 80px;
+}
+.btn1{
+    background-color: rgb(23, 127, 191);
+    color: #1ed4cb;
+}
+.btn1:hover{
+    background-color: rgb(18, 96, 145);
+}
+.btn2{
+    background-color: rgb(46, 40, 162);
+    color: #1ed4cb;
+}
+.btn2:hover{
+    background-color: rgb(30, 26, 104);
+
+}
+.s2 input{
+    width: 200px;
+    height: 20px;
+}
+.form{
+    border-bottom: 1px solid rgb(94, 68, 68);
+    height: 50px;
+}
+.form ul li{
+    font-weight: bold;
+    float: left;
+    margin: 15px;
+    font-size: 18px;
+}
+.user-data{
+    /****************************************************/
+    margin-top: 10px;
+    padding-top: 25px;
+    width: 100%;
+    height: 400px; /* 设置容器的固定高度 */
+    overflow: auto; /* 允许显示滚动条 */
+}
+
+.user-data table{
+    color: #f1f1f1;
+    border-collapse: separate;
+    border-spacing: 90px 0;
+    padding-top: 10px;
+}
+.user-data table th{
+    padding: 5px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.user-data table td{
+    padding: 5px;
+    font-size: 15px;
+}
+
+.user-data table td button{
+    outline: none;
+    border: 1px solid rgb(114, 91, 91);
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+}
+.user-data table td button:hover{
+    background-color: red;
+    color:white;
+
+}
+
+.other{
+    position: relative;
+    width: 100%;
+    display: none;
+}
+
+.other-data{
+    width: 100%;
+    margin-top: 10px;
+    padding-top: 25px;
+    height: 450px; /* 设置容器的固定高度 */
+    overflow: auto; /* 允许显示滚动条 */
+}
+
+.other-data table{
+    color: #00FF33;
+    border-collapse: separate;
+    border-spacing: 130px 0;
+
+}
+.other-data table th{
+    padding: 5px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.other-data table td{
+    padding: 5px;
+    font-size: 15px;
+}
+
+.other-data ul li{
+    float: left;
+    color: #00FF33;
+}
+
+
+.other-data table td button{
+    outline: none;
+    border: 1px solid rgb(114, 91, 91);
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+}
+.other-data table td button:hover{
+    background-color: red;
+    color:white;
+
+}
+
+.user{
+    width: 100%;
+    height: 500px;
+    backdrop-filter: blur(10px); /* 调整模糊程度 */
+    -webkit-backdrop-filter: blur(10px);
+    display: none;
+}
+
+.other{
+    width: 100%;
+    height: 500px;
+    backdrop-filter: blur(10px); /* 调整模糊程度 */
+    -webkit-backdrop-filter: blur(10px);
+    display: none;
+}
+
+.sale{
+    width: 100%;
+    height: 500px;
+    backdrop-filter: blur(10px); /* 调整模糊程度 */
+    -webkit-backdrop-filter: blur(10px);
+    display: none;
+}
+.sale .saledata{
+    width: 100%;
+    margin-top: 10px;
+    padding-top: 25px;
+    height: 340px; /* 设置容器的固定高度 */
+    overflow: auto; /* 允许显示滚动条 */
+}
+.sale .saledata table{
+    color: #f1f1f1;
+    border-collapse: separate;
+    border-spacing: 150px 0;
+    padding-top: 0;
+}
+.sale .saledata table th{
+    padding: 5px;
+    font-size: 15px;
+    font-weight: bold;
+}
+.sale .saledata table td{
+    padding: 5px;
+    font-size: 15px;
+    white-space: nowrap;
+}
+.sale .saledata table input{
+    outline: none;
+    border: none;
+    color: black;
+    height: 25px;
+    width: 25px;
+    text-align: center;
+}
+.sale .saledata table .icon-add, .icon-minus{
+    cursor: pointer;
+}
+.settlement {
+    position: fixed;
+    bottom: 5px;
+    width: 980px;
+    height: 52px;
+    margin: 10px auto 0 auto;
+}
+.settlement .ww {
+    float: left;
+    width: 885px;
+    height: 100%;
+    border: 1px solid #f1f1f1;
+    border-right: 0;
+}
+
+.ww #calculate {
+    float: left;
+    height: 100%;
+    line-height: 52px;
+    font-weight: 700;
+    font-size: 16px;
+    color: whitesmoke;
+}
+
+.ww .price-sum {
+    float: left;
+    width: 150px;
+    height: 100%;
+    margin-left: 700px;
+    line-height: 52px;
+    font-size: 16px;
+    color: whitesmoke;
+}
+
+.settlement .submit {
+    float: left;
+    width: 94px;
+    height: 100%;
+    background-color: #e54346;
+    line-height: 52px;
+    text-align: center;
+    font-size: 18px;
+}
+.submit .pay {
+    outline: none;
+    border: none;
+    color: #fff;
+    background: transparent;
+    text-decoration: none;
+}
+.submit .pay:hover{
+    cursor: pointer;
+}
+
+.goods-rule{
+    position: relative;
+    width: 100%;
+    height: 500px;
+    backdrop-filter: blur(10px); /* 调整模糊程度 */
+    -webkit-backdrop-filter: blur(10px);
+    display: none;
+}
+
+
+/*************/
+.list{
+    width: 400px;
+    height: 70px;
+    padding: 0 25px;
+    border-radius: 10px;
+position: relative;
+display: flex;
+}
+
+.list li{
+    width: 70px;
+    height: 70px;
+    color: #f1f1f1;
+    z-index: 1;
+    position: relative;
+    list-style: none;
+    cursor: pointer;
+    /*将文字对其居中*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.list li i{
+    display: block;
+    height: 70px;
+    line-height: 70px;
+    font-size: 24px;
+    text-align: center;
+    position: relative;
+    /*增加过渡*/
+    transition: all 0.5s;
+}
+
+.list li span{
+    position: absolute;
+    font-size: 12px;
+    letter-spacing: 2px;
+    transition: all .5s;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.list li.act i{
+    transform: translateY(-35px);
+    color: deepskyblue;
+}
+
+.list li.act span{
+    opacity: 1;
+    transform: translateY(10px);
+}
+
+.popupWindow.popWinHidden{
+    opacity: 0;
+}
+
+
+.popupWindow{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.popupWindow .popBox{
+    display: flex;
+    height: 80%;
+    width: 50%;
+    background: rgb(37,38,50);
+    margin: auto;
+    margin-top: 5%;
+    position: relative;
+    border-radius: 25px;
+    overflow: auto; /* 允许显示滚动条 */
+    background-image: url("../img/用户消息.png");
+    background-size: 100% 100%;
+}
+
+
+.userInfoBox table{
+    color: #f1f1f1;
+    border-collapse: separate;
+    border-spacing: 100px 0;
+    padding-top: 50px;
+}
+.userInfoBox table th{
+    padding: 5px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.userInfoBox table td{
+    padding: 5px;
+    font-size: 15px;
+}
+.userInfoBox table tr td:last-child{
+    white-space: nowrap;
+}
+.userInfoBox table tr input{
+    outline: none;
+    background: transparent;
+    border: none;
+}
+.userInfoBox table tr button{
+    outline: none;
+    color: black;
+    border-radius: 35px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+.userInfoBox table tr button:hover{
+    background-color: red;
+    color: #f1f1f1;
+}
+.userInfoBox .pswtable{
+    display: none;
+}
+.userInfoBox .pswtable input{
+    border-radius: 35px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+
+}
+.userInfoBox .pswtable .submit{
+    outline: none;
+    border-radius: 35px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+.userInfoBox .pswtable .submit:hover{
+    background-color: red;
+    color: white;
+}
+
+.popupWindow .popBox::-webkit-scrollbar {
+    width: 0;
+}
+
+.popupWindow .popBox .closeButton {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+}
+
+ .receivedMessageList .icon-shanchu{
+    color: red;
+    position: absolute;
+    left: 662px;
+    top: 2px;
+    font-size: 18px;
+}
+
+
+.popupWindow .popBox .receiveMessBox .icon-rili{
+    font-size: 62px;
+    color: steelblue;
+    position: absolute;
+    left: 570px;
+    top: 5px;
+}
+
+.popupWindow .popBox .receiveMessBox .icon-rili span{
+    font-size: 20px;
+    color: antiquewhite;
+    right: 10px;
+    top: 37px;
+    position: absolute;
+}
+
+.popupWindow .popBox .receiveMessBox .receivedMessageList{
+    width: 700px;
+    margin-top: 15px;
+    margin-left: 10px;
+    height: 100px;
+    background-color: white;
+    border-radius: 25px;
+    position: relative;
+    top: 5%;
+
+}
+
+.popupWindow .popBox .receiveMessBox .receivedMessageList .messInfoList{
+    padding-left: 15px;
+    padding-top: 5px;
+}
+
+.popupWindow .popBox .receiveMessBox .receivedMessageList .messContent{
+    width: 575px;
+    padding-left: 15px;
+    padding-top: 10px;
+}

@@ -1,0 +1,326 @@
+* {
+	padding: 0;
+	margin: 0;
+	user-select: none;
+}
+
+body {
+	background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+}
+.body{
+	margin-top: 5px;
+}
+
+a {
+	text-decoration: none;
+	color: #000000;
+	font-weight: bold;
+}
+
+li {
+	list-style: none;
+}
+
+
+.header {
+	border: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.div4 {
+	width: 1181px;
+	height: 100px;
+	overflow: hidden;
+	position: relative;
+	margin-left: 97px;
+	border: none;
+}
+
+.div4::before {
+	content: '';
+	position: absolute;
+	left: -50%;
+	top: -50%;
+	width: 200%;
+	height: 200%;
+	background-color: rgb(40, 141, 180);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-image: conic-gradient(transparent, rgb(40, 141, 180), transparent 30%);
+	animation: div4Rotate 4s linear infinite;
+
+}
+
+.div4>div {
+	position: absolute;
+	left: 5px;
+	top: 5px;
+	width: calc(100% - 10px);
+	height: calc(100% - 10px);
+	background: linear-gradient(to right, #8fe0e4, #85a2e4, #8085d8);
+	z-index: 2;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+@keyframes div4Rotate {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+/* 动画效果 */
+.header h1 {
+	animation: textAnimate 2s ease-in-out infinite alternate;
+}
+
+@keyframes textAnimate {
+	0% {
+		transform: scale(1);
+		color: #333;
+	}
+
+	100% {
+		transform: scale(1.1);
+		color: rgb(40, 141, 180);
+	}
+}
+
+
+
+#nav {
+	width: 15%;
+	height: 500px;
+	border: none;
+	position: relative;
+}
+
+.accordion {
+	height: 615px;
+	border: 2px solid rgb(40, 141, 180);
+	box-shadow: 0 0 10px rgb(40, 141, 180);
+	border-radius: 10px;
+	
+}
+
+.submenu .submenu-box {
+	border: none;
+}
+.submenu .submenu-box a:hover {
+	color: rgb(40, 141, 180);
+}
+
+.accordion .link {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	/* 水平居中 */
+	align-items: center;
+	/* 垂直居中 */
+	cursor: pointer;
+	width: 100%;
+	height: 40px;
+	font-size: 20px;
+	font-weight: bold;
+	border: none;
+}
+
+.accordion .link::before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background-color: rgb(40, 141, 180);
+	transition: width 0.3s ease;
+	/* 添加过渡效果 */
+}
+
+.accordion .link:hover::before {
+	width: 100%;
+	/* 鼠标悬停时下划线变长 */
+}
+
+
+.nav-main {
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	/* align-items: center; */
+}
+
+.submenu {
+	display: none;
+	list-style-type: none;
+	margin-left: 35%;
+	text-align: left;
+}
+
+/* **************************************** */
+/* 当展开子菜单时的动画效果 */
+.submenu.active {
+	display: block;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.5s ease-in-out;
+}
+
+.submenu.active.show {
+	max-height: 100px;
+	/* 适当的最大高度，根据实际情况调整 */
+}
+
+/* **************************************** */
+
+
+.submenu-box {
+	width: 100%;
+}
+
+
+.submenu.show {
+	display: block;
+}
+
+
+
+#main {
+	width: 70%;
+	height: 620px;
+	border: 2px solid rgb(40, 141, 180);
+	box-shadow: 0 0 10px rgb(40, 141, 180);
+	margin-left: 10px;
+	background-color: rgba(255, 255, 255, 0.2);
+	/* 半透明背景 */
+	backdrop-filter: blur(10px);
+	/* 模糊效果 */
+	border-radius: 10px;
+	box-sizing: border-box;
+}
+
+.main .main-user-info {
+	position: relative;
+}
+
+.main .main-user-info .p-map {
+	position: absolute;
+	top: 260px;
+	right: 80px;
+	width: 25%;
+	font-weight: bold;
+	text-align: center;
+	/* border: 2px solid #1ed4cb; */
+}
+
+.main .main-user-info .map {
+	height: 200px;
+}
+
+
+.main .main-user-info .barChart1 {
+	width: 50%;
+	height: 225px;
+	position: absolute;
+	top: 260px;
+	left: 60px;
+}
+
+.main .main-user-info .barChart2 {
+	width: 50%;
+	height: 225px;
+	position: absolute;
+	top: 10px;
+	left: 60px;
+}
+
+
+.main .main-user-info .ipTable {
+	width: 235px;
+	border-collapse: collapse;
+	position: absolute;
+	top: 10px;
+	left: 66.5%;
+	line-height: 14px;
+	border: 2px solid #1ed4cb;
+}
+
+.ipTable th,
+.ipTable td {
+	border: 1px solid #ddd;
+	padding: 8px;
+	text-align: left;
+}
+
+.ipTable th {
+	background-color: #f2f2f2;
+}
+
+.ipTable caption {
+	font-weight: bold;
+	margin-top: 9px;
+	margin-bottom: 5px;
+}
+
+.ipTable td:nth-child(2) {
+	width: 71%;
+	/* 根据需要调整宽度 */
+}
+
+.main .main-log-query {
+	position: relative;
+}
+
+.main .main-log-query .barChart01 {
+	position: absolute;
+	top: 20px;
+	left: 25px;
+	width: 430px;
+}
+
+.main .main-log-query .barChart02 {
+	position: absolute;
+	top: 20px;
+	right: 30px;
+	width: 430px;
+}
+
+.main .main-log-query .barChart03 {
+	position: absolute;
+	top: 270px;
+	left: 25px;
+	width: 430px;
+}
+
+.main .main-log-query .barChart04 {
+	position: absolute;
+	top: 270px;
+	right: 30px;
+	width: 430px;
+}
+
+.main .main-sales-query {
+	position: relative;
+}
+
+.main .main-sales-query .container01 {
+	width: 450px;
+	position: absolute;
+	top: 20px;
+}
+
+.main .main-sales-query .container02 {
+	width: 450px;
+	position: absolute;
+	top: 20px;
+	right: 25px;
+}
+
+.main .main-sales-query .container01 p,
+.main .main-sales-query .container02 p {
+	font-weight: bold;
+	text-align: center;
+	font-size: 20px;
+}

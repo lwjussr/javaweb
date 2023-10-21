@@ -1,0 +1,112 @@
+<!--作者：陈鑫
+时间：20230712
+功能：前端登录界面
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录</title>
+    <!--链接外部css文件-->
+    <link rel="stylesheet" href="css/Lstyle.css">
+    <script src="./js/jquery-validation-1.19.5/lib/jquery.js"></script>
+    <script src="./js/jquery-validation-1.19.5/dist/jquery.validate.min.js"></script>
+    <script>
+        $(function(){
+            
+            // 自定义密码规则
+            $.validator.addMethod("pswrule",function(value,element,params){
+                var reg=/^(?![\d]+$)(?![a-z]+$)(?![A-Z]+$)[\da-zA-z]$/;
+                return reg.test(value);
+            });
+            ////////////
+            $.validator.addMethod("check",function(value,element,params){
+                if($(".Captcha").text()==$("#Captcha").text()){
+                    return true;
+                }else{
+                    return false;
+                }
+            });
+            // 生成验证码函数
+            $.fn.getcode=function(){
+                var code=Math.random().toString(36).substr(3,5);
+                return code;
+            }
+            // 点击刷新验证码的函数
+            $(".Captcha").click(function(){
+                $(".Captcha").text($(".Captcha").getcode());
+            });
+            // 页面加载的时候就出现验证码
+            $(".Captcha").click();
+            //对登录表单使用规则
+            $("#login-form").validate({
+                rules:{
+                    username:"required",
+                    Captcha:{required:true,
+                        check:true
+                    },
+                    password:{
+                        required:true,
+                        rangelength:[8,16],
+                        pswrule:true
+                    }
+                },messages:{
+                    username:"请填写用户名",
+                    Captcha:{required:"请输入验证码",
+                        check:"验证码错误"
+                    },
+                    password:{
+                        required:"请输入密码",
+                        rangelength:"密码长度在8-16位之间",
+                        pswrule:"密码中至少包含大/小写字母或特殊字符中的两种"
+                    }
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <!-- 背景 -->
+    <video autoplay muted loop src="./mp4/video (2160p).mp4"></video>
+    <section>
+        
+        <!--主体盒子-->
+        <div class="box">
+           
+            <!--有浮动效果的矩形-->
+            <div class="square" style="--i:0"></div>
+            <div class="square" style="--i:1"></div>
+            <div class="square" style="--i:2"></div>
+            <div class="square" style="--i:3"></div>
+            <div class="square" style="--i:4"></div>
+            <!--动态方块盒子-->
+            <div class="container">
+                <!--登录表单盒子-->
+                <div class="form">
+                    <h2>账号登录</h2>
+                    <!--表单-->
+                    <form id="login-form">
+                        <div class="inputBox">
+                            <!-- 用户名为必填项 -->
+                            <input type="text" name="username" placeholder="请输入用户名/账号" autofocus>
+                        </div>
+                        <div class="inputBox">
+                            <!-- 密码中允许出现数字、大写字母、小写字母、特殊字符，但至少包含其中2种且长度在8-16之间 -->
+                            <input type="password" name="password" placeholder="请输入密码">
+                        </div>
+                        <div class="inputBox">
+                            <div class="Captcha"></div>
+                            <input type="text" name="Captcha" id="" placeholder="请输验证码">
+                            <p></p>
+                            <input type="submit" value="登录">
+                        </div>
+                        <!-- 写入注册页面的链接 -->
+                        <p class="forget">没有账号？<a href="register.html">点击注册</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

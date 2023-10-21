@@ -1,0 +1,93 @@
+{
+  "id": "4215393",
+  "name": "02",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "15838424",
+      "name": "add",
+      "font_class": "add",
+      "unicode": "e664",
+      "unicode_decimal": 58980
+    },
+    {
+      "icon_id": "15838514",
+      "name": "minus",
+      "font_class": "minus",
+      "unicode": "e67a",
+      "unicode_decimal": 59002
+    },
+    {
+      "icon_id": "5057540",
+      "name": "日历",
+      "font_class": "rili",
+      "unicode": "e619",
+      "unicode_decimal": 58905
+    },
+    {
+      "icon_id": "7738011",
+      "name": "退出",
+      "font_class": "tuichu",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "7775069",
+      "name": "删除",
+      "font_class": "shanchu",
+      "unicode": "e646",
+      "unicode_decimal": 58950
+    },
+    {
+      "icon_id": "8289011",
+      "name": "删除",
+      "font_class": "shanchu1",
+      "unicode": "e86d",
+      "unicode_decimal": 59501
+    },
+    {
+      "icon_id": "10593835",
+      "name": "用户-角色-用户名-单人_jurassic",
+      "font_class": "jurassic_user",
+      "unicode": "e6a4",
+      "unicode_decimal": 59044
+    },
+    {
+      "icon_id": "18267905",
+      "name": "安全隐私",
+      "font_class": "anquanyinsi",
+      "unicode": "e98b",
+      "unicode_decimal": 59787
+    },
+    {
+      "icon_id": "18267907",
+      "name": "仓储仓库",
+      "font_class": "cangchucangku",
+      "unicode": "e98c",
+      "unicode_decimal": 59788
+    },
+    {
+      "icon_id": "18267956",
+      "name": "图表柱图",
+      "font_class": "tubiaozhutu",
+      "unicode": "e997",
+      "unicode_decimal": 59799
+    },
+    {
+      "icon_id": "27804866",
+      "name": "编辑",
+      "font_class": "bianji",
+      "unicode": "100ab",
+      "unicode_decimal": 65707
+    },
+    {
+      "icon_id": "33987164",
+      "name": "下拉",
+      "font_class": "a-xiala2",
+      "unicode": "e621",
+      "unicode_decimal": 58913
+    }
+  ]
+}
